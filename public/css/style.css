@@ -1,0 +1,151 @@
+/* 1. Global Reset & Fonts */
+:root {
+    --terminal-green: #00ff00;
+    --terminal-dark: #0d1117;
+    --ubuntu-orange: #e95420;
+    --linux-blue: #0066cc;
+}
+
+body {
+    /* THIS IS THE FIX: Applies the "Home" background to ALL pages */
+    background: linear-gradient(rgba(45, 55, 73, 1), rgba(0, 0, 0, 0.9)), url('/images/bg-2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    /* Font & Color Consistency */
+    font-family: 'Courier New', monospace;
+    background-color: #1e1e1e; /* Fallback color */
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* Allows footer to stick to bottom */
+}
+
+/* 2. Layout Fixes */
+main {
+    flex: 1; /* Pushes footer down */
+    margin-top: 76px; /* Space for fixed navbar */
+}
+
+/* 3. Typography */
+h1, h2, h3, h4, h5, h6, p, a, span, div {
+    font-family: 'Courier New', monospace;
+}
+
+.text-secondary {
+    color: #a0aec0 !important; /* Ensure secondary text is visible on dark bg */
+}
+
+/* 4. Terminal Elements */
+.terminal-prompt {
+    color: var(--terminal-green);
+}
+
+.section-title {
+    border-left: 4px solid var(--ubuntu-orange);
+    padding-left: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* 5. Buttons */
+.btn-terminal {
+    background-color: var(--terminal-dark);
+    border: 2px solid var(--terminal-green);
+    color: var(--terminal-green);
+    font-family: 'Courier New', monospace;
+}
+
+.btn-terminal:hover {
+    background-color: var(--terminal-green);
+    color: var(--terminal-dark);
+}
+
+.btn-outline-success {
+    color: var(--terminal-green);
+    border-color: var(--terminal-green);
+}
+
+.btn-outline-success:hover {
+    background-color: var(--terminal-green);
+    color: var(--terminal-dark);
+}
+
+/* 6. Cards */
+.card-linux {
+    background-color: #2d3748; /* Dark card background */
+    border: 1px solid #4a5568;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.card-linux:hover {
+    border-color: var(--terminal-green);
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+}
+
+.card-title {
+    color: var(--terminal-green); /* Green titles on cards */
+}
+
+/* 7. Forms (Contact Page) */
+.form-control {
+    background-color: #4a5568;
+    border: 1px solid #4a5568;
+    color: #fff;
+}
+
+.form-control:focus {
+    background-color: #2d3748;
+    border-color: var(--terminal-green);
+    box-shadow: 0 0 0 0.2rem rgba(0, 255, 0, 0.25);
+    color: #fff;
+}
+
+.form-label {
+    color: #fff;
+}
+
+/* 8. Footer */
+footer {
+    background-color: #1a202c;
+    margin-top: auto;
+    border-top: 1px solid #2d3748;
+}
+
+/* 9. Navbar */
+.navbar {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #ccc;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--terminal-green);
+}
+
+/* 10. Animations */
+.typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3s steps(40, end);
+    display: inline-block;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+.img-logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}

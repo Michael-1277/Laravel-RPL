@@ -1,0 +1,70 @@
+/* resources/css/app.css */
+
+/* Terminal Theme Styles */
+.terminal-prompt {
+    font-family: 'Courier New', monospace;
+    color: #00ff00;
+}
+
+.btn-terminal {
+    border: 2px solid #00ff00;
+    color: #00ff00;
+    background: transparent;
+    font-family: 'Courier New', monospace;
+    padding: 8px 20px;
+    transition: all 0.3s;
+}
+
+.btn-terminal:hover {
+    background: #00ff00;
+    color: #000;
+}
+
+.card-linux {
+    background: rgba(45, 55, 73, 0.8);
+    border: 1px solid #4a5568;
+    border-radius: 8px;
+}
+
+.img-logo {
+    height: 40px;
+    width: auto;
+    margin-right: 10px;
+}
+
+/* Typewriter effect */
+.typewriter {
+    overflow: hidden;
+    border-right: 3px solid #00ff00;
+    white-space: nowrap;
+    animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #00ff00 }
+}
+
+/* Form styles */
+.form-control:focus {
+    background-color: #4a5568 !important;
+    border-color: #00ff00 !important;
+    color: #fff !important;
+    box-shadow: 0 0 0 0.2rem rgba(0, 255, 0, 0.25) !important;
+}
+
+/* Navigation active state */
+.nav-link.active {
+    color: #00ff00 !important;
+    border-bottom: 2px solid #00ff00;
+}
+
+/* Section titles */
+.section-title {
+    font-family: 'Courier New', monospace;
+}
